@@ -1,0 +1,7 @@
+<h1>Click a Billboard Song to View Content</h1>
+<%= link_to 'Create a new Billboard Song', new_billboard_song_path %>
+<ul>
+  <%= @billboard_songs.each do |billboard_song| %>
+    <li><%= link_to billboard_song.song, billboard_song %></li>
+  <% end %>
+</ul>

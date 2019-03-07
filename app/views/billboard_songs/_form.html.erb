@@ -1,0 +1,11 @@
+<h1><%= @billboard_song.id ? 'Edit Billboard Song' : 'Create Billboard Song %></h1>
+<hr/>
+<%= form_for @billboard_song do |f| %>
+  <%= f.label :song %>
+  <%= f.text_field :song, required: true, autofocus: true %>
+
+  <%= f.label :rank %>
+  <%= f.number_field :rank, required: true %>
+
+  <%= f.submit %>
+<% end %>
